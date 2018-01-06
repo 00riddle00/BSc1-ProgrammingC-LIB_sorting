@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS=-Wall -Wextra -fPIC -xc -g -std=gnu99
+
+bubble_sort_b_and_c.o: ../sort_helpers/sort_helpers.o 
+
+clean:
+		rm -f bubble_sort_b_and_c.o
+
+rebuild: clean bubble_sort_b_and_c.o
+	
+
