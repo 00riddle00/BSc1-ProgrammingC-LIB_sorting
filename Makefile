@@ -1,3 +1,4 @@
+# make dynamic library
 CC=gcc
 CFLAGS=-Wall -Wextra -xc -g -std=gnu99
 
