@@ -3,11 +3,22 @@
 
 #include <stdio.h>
 
-#define MAX(x, y) (((x) > (y)) ? (x) : (y))
+extern struct MaxHeap
+{
+    int size;
+    int* array;
+};
 
-int* heapSort(int arr[], int n);
-void heapify(int arr[], int n, int i);
-void buildHeap(int arr[], int n);
-void printArray(int* arr, int n);
+// The main function to heapify a Max Heap. The function
+// assumes that everything under given root (element at
+// index idx) is already heapified
+void maxHeapify(struct MaxHeap* maxHeap, int idx);
+
+// A utility function to create a max heap of given capacity
+struct MaxHeap* createAndBuildHeap(int *array, int size);
+
+// The main function to sort an array of given size
+int* heapSort(int* array, int size);
 
 #endif
+
